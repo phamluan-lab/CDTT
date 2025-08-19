@@ -1,11 +1,18 @@
 import React, { useEffect, useState } from "react";
 import menuService from "../../services/menuService"; 
+<<<<<<< HEAD
 import { NavLink } from "react-router"; 
+=======
+>>>>>>> 6358b48 (cap nhat code)
 
 const Nav = () => {
   const [menus, setMenus] = useState([]);
   const [loading, setLoading] = useState(true);
+<<<<<<< HEAD
   
+=======
+  const [activeLink, setActiveLink] = useState('');
+>>>>>>> 6358b48 (cap nhat code)
 
   useEffect(() => {
     const fetchMenus = async () => {
@@ -27,6 +34,13 @@ const Nav = () => {
     fetchMenus();
   }, []);
 
+<<<<<<< HEAD
+=======
+  const handleClick = (link) => {
+    setActiveLink(link);
+  };
+
+>>>>>>> 6358b48 (cap nhat code)
   if (loading) {
     return <div>Đang tải menu...</div>; 
   }
@@ -35,6 +49,7 @@ const Nav = () => {
     <nav className="mainmenu bg-amber-400">
       <div className="container mx-auto md:px-6">
         <ul className="flex">
+<<<<<<< HEAD
        
           {menus.length > 0 ? (
             menus.map((menu) => (
@@ -58,6 +73,19 @@ const Nav = () => {
                 </NavLink>
               </li>
                
+=======
+          {menus.length > 0 ? (
+            menus.map((menu) => (
+              <li key={menu.id} className="border-b-4 hover:border-blue-500">
+                <a
+                  href={menu.link}
+                  onClick={() => handleClick(menu.link)}
+                  className={`inline-block p-4 text-xl ${activeLink === menu.link ? "border-red-500" : "border-transparent"}`}
+                >
+                  {menu.name}
+                </a>
+              </li>
+>>>>>>> 6358b48 (cap nhat code)
             ))
           ) : (
             <li className="text-red-500">Không có menu để hiển thị</li>

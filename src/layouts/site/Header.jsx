@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import Logo from '../../assets/logo.webp';
 import { FaUserAlt } from "react-icons/fa";
@@ -5,6 +6,16 @@ import { FaSearch } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { useCart } from '../../pages/frontend/home/CartContext';
+=======
+import React, { useState } from 'react'
+import Logo from '../../assets/logo.webp';
+import { FaUserAlt } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
+import { FaShoppingCart } from "react-icons/fa";
+import { useCart } from '../../pages/frontend/home/CartContext';
+import FavoriteCount from '../../pages/frontend/components/FavoriteCount';
+
+>>>>>>> 6358b48 (cap nhat code)
 const Header = () => {
   const { totalItems } = useCart();
   return (
@@ -12,6 +23,7 @@ const Header = () => {
       <div className="container mx-auto">
         <div className="flex items-center gap-8 py-2">
           <div className="basis-2/12">
+<<<<<<< HEAD
             <img src="#" className='w-full' alt="" />
           </div>
           <div className="basis-5/12">
@@ -34,6 +46,13 @@ const Header = () => {
               <li>Dịch vụ</li>
               <li>Liên hệ</li>
             </ul>
+=======
+            <img src={Logo} className='w-full' alt="" />
+          </div>
+          <div className="basis-5/12">
+          
+         
+>>>>>>> 6358b48 (cap nhat code)
           </div>
           <div className="basis-5/12">
             <div className='grid grid-cols-3 gap-2'>
@@ -55,13 +74,22 @@ const Header = () => {
               <div>
                 <div className='flex'>
                   <div className='basis-4/12'>
+<<<<<<< HEAD
                     <div className='w-12 h-14 border-2 border-yellow-400 rounded-full flex justify-center items-center'>
                       <FaRegHeart className='text-3xl text-red-400' />
+=======
+                    <div className='relative w-12 h-14 border-2 border-yellow-400 rounded-full flex justify-center items-center'>
+                      <FavoriteCount />
+>>>>>>> 6358b48 (cap nhat code)
                     </div>
                   </div>
                   <div className="basis-8/12">
                     <h3 className='font-bold'>Yêu thích</h3>
+<<<<<<< HEAD
                     <h4><a href='#'>Sản phẩm</a></h4>
+=======
+                    <h4><a href='/favorites'>Sản phẩm</a></h4>
+>>>>>>> 6358b48 (cap nhat code)
                   </div>
                 </div>
               </div>

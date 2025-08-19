@@ -23,7 +23,7 @@ const List = () => {
   return (
     <div className=''>
       <div className='flex justify-between items-center mb-4'>
-        <h1 className='font-bold uppercase text-blue-700'>DANH SÁCH BANNER</h1>
+        <h1 className='font-bold uppercase text-black'>DANH SÁCH BANNER</h1>
         <div className=''>
           <NavLink to="/admin/banner/create" className="bg-green-600 p-2 rounded-xl text-white mx-1">
             <FaPlus className="inline" />Thêm mới
